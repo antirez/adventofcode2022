@@ -9,6 +9,7 @@
  * 2. Use a functional approach to leave the logic identical but call
  *    the nested function selectMove() to obtain one of the arguments
  *    of gameScore().
+ * 3. Use of comments to create a readable lookup table for selectMove().
  */
 
 /* Given a game with me using shape 'me' and the opponent using
