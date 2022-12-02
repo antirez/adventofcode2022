@@ -9,7 +9,9 @@
  * 2. Use a functional approach to leave the logic identical but call
  *    the nested function selectMove() to obtain one of the arguments
  *    of gameScore().
- * 3. Use of comments to create a readable lookup table for selectMove().
+ * 3. Avoiding of a lookup table by discovering the mathematical rule that
+ *    allows us to immediately select what shape to reply for the desired
+ *    outcome.
  */
 
 /* Given a game with me using shape 'me' and the opponent using
@@ -37,15 +39,17 @@ int selectMove(int opp, int outcome) {
     int out = outcome-'X'; /* 0 = Lose, 1 = Draw, 2 = Win. */
     opp -= 'A';            /* 0 = Rock, 1 = Paper, 2 = Scissor. */
 
-    /* Lookup table where choice[opp][out] will return the move
-     * to do. */
-    int choice[3][3] = {
-                        /* Lose    Draw        Win */
-        /* Rock */      {2,         0,          1},
-        /* Paper */     {0,         1,          2},
-        /* Scissor */   {1,         2,          0}
-    };
-    return choice[opp][out]+'A';
+    /* If you think at the sequence [Rock, Paper, Scissor], if you want
+     * to lose against one of those, you have to pick the shape that
+     * is two places foward (for exaple for Rock is Scissor), if you
+     * want to draw the shape after three positions, that is the same
+     * shape your opponent is using, and finally you to win you want
+     * to chose the next one (that is the same as the shape after four
+     * positions, since we rotate).
+     *
+     * Now given that the outcome is 0, 1, 2, we can summarize the above
+     * into the following: */
+    return 'A'+((opp+2+out)%3);
 }
 
 int main(void) {
