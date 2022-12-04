@@ -22,10 +22,7 @@ int rangeLen(range r) {
 }
 
 range rangeOverlap(range a, range b) {
-    range r;
-    r.start = max(a.start,b.start);
-    r.end = min(a.end,b.end);
-    return r;
+    return rangeNew(max(a.start,b.start),min(a.end,b.end));
 }
 
 /* We expect the range to be in the form <number>-<number><nulterm>.
