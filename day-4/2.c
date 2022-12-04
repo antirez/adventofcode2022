@@ -66,9 +66,9 @@ int main(void) {
         range overlap = rangeOverlap(a,b);
         /* Why >= 0 instead of > 0? Because the ranges in the puzzle
          * are discrete, so 2-4, 4-6 are consireding overlapping while
-         * if you imagine them in the number line they have a point in
+         * if you imagine them in the numbers line, they have a point in
          * common but no overlap. To account for it, we just need to
-         * consider just "touching" ranges as overlapping. */
+         * consider "touching" ranges as overlapping. */
         if (rangeLen(overlap) >= 0) overlaps++;
     }
     fclose(fp);
