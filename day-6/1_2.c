@@ -19,7 +19,7 @@ int main(void) {
                          greater than 1, in a given moment. */
 
     /* We also need to remember at which position on the stream we are,
-     * since we need to report the last time we saw M different symbols. */
+     * since we need to report the first time we saw M different symbols. */
     long index = 0;
 
     /* This approach gives us another key advantage: we can process the
