@@ -7,3 +7,4 @@ Just a couple of Advent of Code puzzles solved in C. When possible I try to use 
 * Day 5 shows linked lists are useful.
 * Day 6 will solve in `O(N)` instead of `O(N*M)`.
 * Day 7 uses recursion and building ad-hoc data structures.
+* Day 8 walks data structures using a velocity vector.
