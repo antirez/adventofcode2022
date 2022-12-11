@@ -10,3 +10,4 @@ Just a couple of Advent of Code puzzles solved in C. When possible I try to use 
 * Day 8 walks data structures using a velocity vector.
 * Day 9 has nothing special. Just plain C code to simulate the rope.
 * Day 10 Simple but fun. Nothing special. Hints at cycles-exact emulation.
+* Day 11 Is an example of how you should not do parsing, assuming tons of stuff about your input. The program uses the LCM to avoid overflow. Yet I had to change int to long, and I did it brutally in `2.c`, with vim search and replace.
