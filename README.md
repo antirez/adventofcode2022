@@ -12,3 +12,4 @@ Just a couple of Advent of Code puzzles solved in C. When possible I try to use 
 * Day 10 Simple but fun. Nothing special. Hints at cycles-exact emulation.
 * Day 11 Is an example of how you should not do parsing, assuming tons of stuff about your input. The program uses the LCM to avoid overflow. Yet I had to change int to long, and I did it brutally in `2.c`, with vim search and replace.
 * Day 12 implements the worst queue you'll ever see.
+* Day 13 uses a recursive parser that generates nested objects.
