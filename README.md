@@ -13,4 +13,4 @@ Just a couple of Advent of Code puzzles solved in C. When possible I try to use 
 * Day 11 Is an example of how you should not do parsing, assuming tons of stuff about your input. The program uses the LCM to avoid overflow. Yet I had to change int to long, and I did it brutally in `2.c`, with vim search and replace.
 * Day 12 implements the worst queue you'll ever see.
 * Day 13 uses a recursive parser that generates nested objects.
-* Day 14 makes AOC a bit boring. Maybe the last I'll do?
+* Day 14 makes AOC a bit boring. Maybe the last I'll do? Note that here it was not needed to simulate every sand grain again, ad I did. It is possible to remember the last position of the previous sand grain before it rested and continue from there. But the execution time would not change *practically*, the problem is too small.
