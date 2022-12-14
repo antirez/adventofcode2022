@@ -268,35 +268,17 @@ int main(int argc, char **argv) {
         exit(1);
     }
 
-    /* Part 1 */
-    // printMap(m,0,0);
-    int count = 0;
-    while(1) {
-        int restx, resty; /* Where the sand rested. */
-        simulSand(m,&restx,&resty,0);
-        if (restx == -1 && resty == -1) {
-            printf("Puzzle 1: %d\n", count);
-            break;
-        }
-        count++;
-    }
-    // printMap(m,0,0);
-
-    /* Part 2. Draw the floor. */
+    /* Draw the floor. */
     mapLine(m,0,maxy+2,m->width-1,maxy+2,'_');
-    // printMap(m,0,0);
+    int count = 0;
 
-    /* Emit more sand until it rests at its origin. */
+    /* Show the animation. */
     while(1) {
         int restx, resty; /* Where the sand rested. */
         simulSand(m,&restx,&resty,1);
-        if (restx == 500-XOFFSET && resty == 0) {
-            printf("Puzzle 2: %d\n", count+1);
-            break;
-        }
+        if (restx == 500-XOFFSET && resty == 0) break;
         count++;
     }
-    // printMap(m,0,0);
 
     /* Cleanup. */
     freeMap(m);
