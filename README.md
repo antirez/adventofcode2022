@@ -15,3 +15,4 @@ Just a couple of Advent of Code puzzles solved in C. When possible I try to use 
 * Day 13 uses a recursive parser that generates nested objects.
 * Day 14 makes AOC a bit boring. Maybe the last I'll do? Note that here it was not needed to simulate every sand grain again, ad I did. It is possible to remember the last position of the previous sand grain before it rested and continue from there. But the execution time would not change *practically*, the problem is too small.
 * Day 15 must show, otherwise no way to solve part 2, that it is possible to get smart when the search space is huge.
+* Day 16 Worst solution so far (back home saturday night, half drunk, can't do better than that): shows how a terrible heuristic can help you brute-force the solution. Warning: the program is quite broken and works for sure only on my `input.txt`, that you can find inside the directory.
